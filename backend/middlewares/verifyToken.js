@@ -19,7 +19,7 @@ const verifyToken = (req, res, next) => {
 };
 
 const verifyAdmin = (req, res, next) => {
-  if (req.user?.isAdmin) {
+  if (req.user?.esAdmin) {
     next();
   } else {
     res.status(403).json({ message: "Acceso solo para administradores" });
